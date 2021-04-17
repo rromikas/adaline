@@ -66,7 +66,7 @@ data = pd.DataFrame.from_dict(dataDict)
 X = data.iloc[0:rowsNumber, 0:n-1].values
 y = data.iloc[0:rowsNumber, n-1].values
 
-model = AdaptiveLinearNeuron(0.001, 20).fit(X, y)
+model = AdaptiveLinearNeuron(0.0000001, 20).fit(X, y)
 
 plt.plot(range(1, len(model.cost) + 1), model.cost, marker='o')
 plt.xlabel('Epochs')
